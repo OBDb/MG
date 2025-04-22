@@ -6,9 +6,10 @@
   ]},
 { "hdr": "7DF", "rax": "7ED", "dbg": true, "cmd": {"01": "0C"}, "freq": 0.25,
   "signals": [
-    {"id": "MG_RPM", "path": "Engine",   "fmt": { "len": 16, "max": 16383.75,             "mul": 0.25,             "unit": "rpm"               }, "name": "Engine RPM"},
-    {"id": "MG_VSS", "path": "Movement", "fmt": { "len": 8,  "max": 255,                                           "unit": "kilometersPerHour" }, "name": "Vehicle speed",           "suggestedMetric": "speed", "description": "Current vehicle speed."},
-    {"id": "MG_AAT", "path": "Climate",  "fmt": { "len": 8,  "max": 215,      "min": -40,              "add": -40, "unit": "celsius"           }, "name": "Ambient air temperature"}
+    {"id": "MG_RPM", "path": "Engine",   "fmt": { "len": 16, "max": 16383.75,             "mul": 0.25,                     "unit": "rpm"               }, "name": "Engine RPM"},
+    {"id": "MG_VSS", "path": "Movement", "fmt": { "len": 8,  "max": 255,                                                   "unit": "kilometersPerHour" }, "name": "Vehicle speed",           "suggestedMetric": "speed",         "description": "Current vehicle speed."},
+    {"id": "MG_AAT", "path": "Climate",  "fmt": { "len": 8,  "max": 215,      "min": -40,                      "add": -40, "unit": "celsius"           }, "name": "Ambient air temperature"},
+    {"id": "MG_SOC", "path": "Battery",  "fmt": { "len": 8,  "max": 100,                  "mul": 0.3921568627,             "unit": "percent"           }, "name": "State of charge",         "suggestedMetric": "stateOfCharge"}
   ]},
 { "hdr": "7DF", "rax": "7ED", "dbg": true, "cmd": {"22": "B041"}, "freq": 30,
   "signals": [
