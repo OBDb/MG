@@ -27,22 +27,6 @@
   "signals": [
     {"id": "MG_EVCC_VOLTAGE", "path": "Battery.EVCC", "fmt": { "len": 16, "max": 25000, "mul": 0.0103092783, "unit": "volts" }, "name": "Voltage"}
   ]},
-{ "hdr": "7DF", "rax": "7ED", "dbg": true, "cmd": {"01": "0C"}, "freq": 0.25,
-  "signals": [
-    {"id": "MG_RPM", "path": "Engine", "fmt": { "len": 16, "max": 16383.75, "mul": 0.25, "unit": "rpm" }, "name": "Engine RPM"}
-  ]},
-{ "hdr": "7DF", "rax": "7ED", "dbg": true, "cmd": {"01": "0D"}, "freq": 0.25,
-  "signals": [
-    {"id": "MG_VSS", "path": "Movement", "fmt": { "len": 8, "max": 255, "unit": "kilometersPerHour" }, "name": "Vehicle speed", "suggestedMetric": "speed", "description": "Current vehicle speed."}
-  ]},
-{ "hdr": "7DF", "rax": "7ED", "dbg": true, "cmd": {"01": "46"}, "freq": 0.25,
-  "signals": [
-    {"id": "MG_AAT", "path": "Climate", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Ambient air temperature"}
-  ]},
-{ "hdr": "7DF", "rax": "7ED", "dbg": true, "cmd": {"01": "5B"}, "freq": 1,
-  "signals": [
-    {"id": "MG_SOC", "path": "Battery", "fmt": { "len": 8, "max": 100, "mul": 0.3921568627, "unit": "percent" }, "name": "State of charge", "suggestedMetric": "stateOfCharge"}
-  ]},
 { "hdr": "7DF", "rax": "7ED", "dbg": true, "cmd": {"22": "B009"}, "freq": 180,
   "signals": [
     {"id": "MG_HVBAT_CMU02_MINVOLT", "path": "Battery.Modules.02", "fmt": {           "len": 16, "max": 10,  "mul": 0.0005, "add": 1,   "unit": "volts"   }, "name": "HV battery module 02 min voltage"},
