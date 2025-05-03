@@ -5,7 +5,7 @@
   ]},
 { "hdr": "710", "rax": "718", "dbg": true, "cmd": {"22": "D001"}, "freq": 4,
   "signals": [
-    {"id": "MG_GWM_STATUS", "path": "Vehicle.Internal", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Vehicle Gateway Status"}
+    {"id": "MG_GWM_STATUS", "path": "ECU", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Vehicle Gateway Status"}
   ]},
 { "hdr": "7DF", "rax": "7EC", "dbg": true, "cmd": {"22": "B001"}, "freq": 180,
   "signals": [
