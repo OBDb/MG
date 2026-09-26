@@ -7,19 +7,34 @@
   "signals": [
     {"id": "MG_GWM_STATUS", "path": "ECU", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Vehicle gateway status"}
   ]},
-{ "hdr": "724", "dbg": true, "cmd": {"22": "B001"}, "freq": 15,
+{ "hdr": "724", "rax": "72C", "dbg": true, "cmd": {"22": "B001"}, "freq": 15,
   "signals": [
     {"id": "MG_TP_FL", "path": "Tires", "fmt": {           "len": 8, "max": 300, "mul": 4, "unit": "kilopascal" }, "name": "Front left tire pressure",  "suggestedMetric": "frontLeftTirePressure"},
     {"id": "MG_TP_FR", "path": "Tires", "fmt": {"bix": 8,  "len": 8, "max": 300, "mul": 4, "unit": "kilopascal" }, "name": "Front right tire pressure", "suggestedMetric": "frontRightTirePressure"},
     {"id": "MG_TP_RR", "path": "Tires", "fmt": {"bix": 16, "len": 8, "max": 300, "mul": 4, "unit": "kilopascal" }, "name": "Rear right tire pressure",  "suggestedMetric": "rearRightTirePressure"},
     {"id": "MG_TP_RL", "path": "Tires", "fmt": {"bix": 24, "len": 8, "max": 300, "mul": 4, "unit": "kilopascal" }, "name": "Rear left tire pressure",   "suggestedMetric": "rearLeftTirePressure"}
   ]},
-{ "hdr": "724", "dbg": true, "cmd": {"22": "B003"}, "freq": 15,
+{ "hdr": "724", "rax": "72C", "dbg": true, "cmd": {"22": "B003"}, "freq": 15,
   "signals": [
     {"id": "MG_TT_FL", "path": "Tires", "fmt": {           "len": 8, "max": 127.5, "div": 2, "unit": "celsius" }, "name": "Front left tire temperature",  "suggestedMetric": "frontLeftTireTemperature"},
     {"id": "MG_TT_FR", "path": "Tires", "fmt": {"bix": 8,  "len": 8, "max": 127.5, "div": 2, "unit": "celsius" }, "name": "Front right tire temperature", "suggestedMetric": "frontRightTireTemperature"},
     {"id": "MG_TT_RR", "path": "Tires", "fmt": {"bix": 16, "len": 8, "max": 127.5, "div": 2, "unit": "celsius" }, "name": "Rear right tire temperature",  "suggestedMetric": "rearRightTireTemperature"},
     {"id": "MG_TT_RL", "path": "Tires", "fmt": {"bix": 24, "len": 8, "max": 127.5, "div": 2, "unit": "celsius" }, "name": "Rear left tire temperature",   "suggestedMetric": "rearLeftTireTemperature"}
+  ]},
+{ "hdr": "740", "dbg": true, "cmd": {"22": "E101"}, "freq": 30,
+  "signals": [
+    {"id": "MG_BCM_ODO", "path": "Trips", "fmt": { "len": 24, "max": 16777215, "unit": "kilometers" }, "name": "Odometer, body control module"}
+  ]},
+{ "hdr": "740", "dbg": true, "cmd": {"22": "E209"}, "freq": 15,
+  "signals": [
+    {"id": "MG_BCM_TP_FL", "path": "Tires", "fmt": {           "len": 8, "max": 510,             "mul": 2,             "unit": "kilopascal" }, "name": "Front left tire pressure",     "suggestedMetric": "frontLeftTirePressure"},
+    {"id": "MG_BCM_TP_FR", "path": "Tires", "fmt": {"bix": 8,  "len": 8, "max": 510,             "mul": 2,             "unit": "kilopascal" }, "name": "Front right tire pressure",    "suggestedMetric": "frontRightTirePressure"},
+    {"id": "MG_BCM_TP_RL", "path": "Tires", "fmt": {"bix": 16, "len": 8, "max": 510,             "mul": 2,             "unit": "kilopascal" }, "name": "Rear left tire pressure",      "suggestedMetric": "rearLeftTirePressure"},
+    {"id": "MG_BCM_TP_RR", "path": "Tires", "fmt": {"bix": 24, "len": 8, "max": 510,             "mul": 2,             "unit": "kilopascal" }, "name": "Rear right tire pressure",     "suggestedMetric": "rearRightTirePressure"},
+    {"id": "MG_BCM_TT_FL", "path": "Tires", "fmt": {"bix": 32, "len": 8, "max": 195, "min": -60,           "add": -60, "unit": "celsius"    }, "name": "Front left tire temperature",  "suggestedMetric": "frontLeftTireTemperature"},
+    {"id": "MG_BCM_TT_FR", "path": "Tires", "fmt": {"bix": 40, "len": 8, "max": 195, "min": -60,           "add": -60, "unit": "celsius"    }, "name": "Front right tire temperature", "suggestedMetric": "frontRightTireTemperature"},
+    {"id": "MG_BCM_TT_RL", "path": "Tires", "fmt": {"bix": 48, "len": 8, "max": 195, "min": -60,           "add": -60, "unit": "celsius"    }, "name": "Rear left tire temperature",   "suggestedMetric": "rearLeftTireTemperature"},
+    {"id": "MG_BCM_TT_RR", "path": "Tires", "fmt": {"bix": 56, "len": 8, "max": 195, "min": -60,           "add": -60, "unit": "celsius"    }, "name": "Rear right tire temperature",  "suggestedMetric": "rearRightTireTemperature"}
   ]},
 { "hdr": "760", "rax": "768", "dbg": true, "cmd": {"22": "B101"}, "freq": 1,
   "signals": [
