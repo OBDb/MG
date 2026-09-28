@@ -41,6 +41,30 @@
     {"id": "MG_BCM_TT_RL", "path": "Tires", "fmt": {"bix": 48, "len": 8, "max": 195, "min": -60,           "add": -60, "unit": "celsius"    }, "name": "Rear left tire temperature",   "suggestedMetric": "rearLeftTireTemperature"},
     {"id": "MG_BCM_TT_RR", "path": "Tires", "fmt": {"bix": 56, "len": 8, "max": 195, "min": -60,           "add": -60, "unit": "celsius"    }, "name": "Rear right tire temperature",  "suggestedMetric": "rearRightTireTemperature"}
   ]},
+{ "hdr": "740", "rax": "748", "dbg": true, "cmd": {"22": "D117"}, "freq": 5,
+  "signals": [
+    {"id": "MG_DRL", "path": "Lights", "fmt": { "len": 1, "max": 1, "unit": "offon" }, "name": "Headlights on"}
+  ]},
+{ "hdr": "745", "rax": "74D", "dbg": true, "cmd": {"22": "B013"}, "freq": 5,
+  "signals": [
+    {"id": "MG_UNLOCKED", "path": "Doors", "fmt": {"bix": 31, "len": 1, "max": 1, "unit": "yesno" }, "name": "Vehicle unlocked"}
+  ]},
+{ "hdr": "750", "rax": "758", "dbg": true, "cmd": {"22": "E00F"}, "freq": 10,
+  "signals": [
+    {"id": "MG_BLOWER", "path": "Climate", "fmt": { "len": 16, "max": 65535, "unit": "scalar" }, "name": "Blower speed"}
+  ]},
+{ "hdr": "750", "rax": "758", "dbg": true, "cmd": {"22": "E013"}, "freq": 10,
+  "signals": [
+    {"id": "MG_FACE_OUTLET_T", "path": "Climate", "fmt": { "len": 16, "max": 6523.5, "min": -30, "div": 10, "add": -30, "unit": "celsius" }, "name": "Face vent outlet temperature"}
+  ]},
+{ "hdr": "750", "rax": "758", "dbg": true, "cmd": {"22": "E01B"}, "freq": 10,
+  "signals": [
+    {"id": "MG_AAT_ATC", "path": "Climate", "fmt": { "len": 16, "max": 6513.5, "min": -40, "div": 10, "add": -40, "unit": "celsius" }, "name": "Ambient temperature, climate control"}
+  ]},
+{ "hdr": "750", "rax": "758", "dbg": true, "cmd": {"22": "E01C"}, "freq": 10,
+  "signals": [
+    {"id": "MG_PTC_T", "path": "Climate", "fmt": { "len": 16, "max": 6513.5, "min": -40, "div": 10, "add": -40, "unit": "celsius" }, "name": "Cabin heater temperature"}
+  ]},
 { "hdr": "760", "rax": "768", "dbg": true, "cmd": {"22": "B101"}, "freq": 1,
   "signals": [
     {"id": "MG_ODO_V2", "path": "Trips", "fmt": { "len": 24, "max": 16777215, "unit": "kilometers" }, "name": "Odometer", "suggestedMetric": "odometer"}
@@ -61,14 +85,38 @@
   "signals": [
     {"id": "MG_SOC", "path": "Battery", "fmt": { "len": 16, "max": 100, "div": 10, "unit": "percent" }, "name": "State of charge", "suggestedMetric": "stateOfCharge"}
   ]},
+{ "hdr": "781", "rax": "789", "dbg": true, "cmd": {"22": "B047"}, "freq": 10,
+  "signals": [
+    {"id": "MG_HVBAT_ERR_GEN1", "path": "Battery", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "HV battery error code"}
+  ]},
 { "hdr": "781", "rax": "789", "dbg": true, "cmd": {"22": "B048"}, "freq": 1,
   "signals": [
     {"id": "MG_IS_CHARGING", "path": "Battery", "fmt": {"bix": 6, "len": 1, "max": 1, "unit": "yesno" }, "name": "Is charging",         "suggestedMetric": "isCharging"},
     {"id": "MG_IS_DCFC",     "path": "Battery", "fmt": {"bix": 7, "len": 1, "max": 1, "unit": "yesno" }, "name": "Is DC fast charging"}
   ]},
+{ "hdr": "781", "rax": "789", "dbg": true, "cmd": {"22": "B049"}, "freq": 10,
+  "signals": [
+    {"id": "MG_HVBAT_RELAY_B_GEN1", "path": "Battery", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "HV battery main relay B state"}
+  ]},
+{ "hdr": "781", "rax": "789", "dbg": true, "cmd": {"22": "B04A"}, "freq": 10,
+  "signals": [
+    {"id": "MG_HVBAT_RELAY_G_GEN1", "path": "Battery", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "HV battery main relay G state"}
+  ]},
+{ "hdr": "781", "rax": "789", "dbg": true, "cmd": {"22": "B052"}, "freq": 10,
+  "signals": [
+    {"id": "MG_HVBAT_RELAY_P_GEN1", "path": "Battery", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "HV battery main relay P state"}
+  ]},
 { "hdr": "781", "rax": "789", "dbg": true, "cmd": {"22": "B056"}, "freq": 60,
   "signals": [
     {"id": "MG_HVBAT_TEMP_GEN1", "path": "Battery", "fmt": { "len": 8, "max": 87.5, "min": -40, "div": 2, "add": -40, "unit": "celsius" }, "name": "HV battery temperature"}
+  ]},
+{ "hdr": "781", "rax": "789", "dbg": true, "cmd": {"22": "B058"}, "freq": 5,
+  "signals": [
+    {"id": "MG_HVBAT_CELL_V_MAX_GEN1", "path": "Battery", "fmt": { "len": 16, "max": 65.535, "div": 1000, "unit": "volts" }, "name": "Highest cell voltage"}
+  ]},
+{ "hdr": "781", "rax": "789", "dbg": true, "cmd": {"22": "B059"}, "freq": 5,
+  "signals": [
+    {"id": "MG_HVBAT_CELL_V_MIN_GEN1", "path": "Battery", "fmt": { "len": 16, "max": 65.535, "div": 1000, "unit": "volts" }, "name": "Lowest cell voltage"}
   ]},
 { "hdr": "781", "rax": "789", "dbg": true, "cmd": {"22": "B05C"}, "freq": 60,
   "signals": [
@@ -77,6 +125,18 @@
 { "hdr": "781", "rax": "789", "dbg": true, "cmd": {"22": "B061"}, "freq": 1,
   "signals": [
     {"id": "MG_SOH", "path": "Battery", "fmt": { "len": 16, "max": 100, "div": 100, "unit": "percent" }, "name": "State of health", "suggestedMetric": "stateOfHealth"}
+  ]},
+{ "hdr": "781", "rax": "789", "dbg": true, "cmd": {"22": "B0CE"}, "freq": 10,
+  "signals": [
+    {"id": "MG_HVBAT_RANGE_RAW_GEN1", "path": "Battery", "fmt": { "len": 16, "max": 65535, "unit": "scalar" }, "name": "HV battery range count"}
+  ]},
+{ "hdr": "785", "rax": "78D", "dbg": true, "cmd": {"22": "B025"}, "freq": 10,
+  "signals": [
+    {"id": "MG_DCDC_LOAD", "path": "Electrical", "fmt": { "len": 16, "max": 16383.75, "div": 4, "unit": "percent" }, "name": "DC/DC converter load"}
+  ]},
+{ "hdr": "785", "rax": "78D", "dbg": true, "cmd": {"22": "B026"}, "freq": 10,
+  "signals": [
+    {"id": "MG_DCDC_T", "path": "Electrical", "fmt": { "len": 16, "max": 65495, "min": -40, "add": -40, "unit": "celsius" }, "name": "DC/DC converter temperature"}
   ]},
 { "hdr": "7DF", "rax": "7EC", "dbg": true, "cmd": {"22": "B001"}, "freq": 180,
   "signals": [
@@ -345,21 +405,105 @@
     {"id": "MG_DOOR_PASSENGER", "path": "Doors", "fmt": {"bix": 6, "len": 1, "max": 1, "unit": "yesno" }, "name": "Door open, passenger"},
     {"id": "MG_DOOR_DRIVER",    "path": "Doors", "fmt": {"bix": 7, "len": 1, "max": 1, "unit": "yesno" }, "name": "Door open, driver"}
   ]},
+{ "hdr": "7E3", "rax": "7EB", "dbg": true, "cmd": {"22": "0112"}, "freq": 10,
+  "signals": [
+    {"id": "MG_12V_V", "path": "Electrical", "fmt": { "len": 8, "max": 25.5, "div": 10, "unit": "volts" }, "name": "12V supply voltage", "suggestedMetric": "starterBatteryVoltage"}
+  ]},
+{ "hdr": "7E3", "rax": "7EB", "dbg": true, "cmd": {"22": "B120"}, "freq": 1,
+  "signals": [
+    {"id": "MG_BRAKE", "path": "Control", "fmt": { "len": 16, "max": 6553.5, "div": 10, "unit": "percent" }, "name": "Brake pedal"}
+  ]},
+{ "hdr": "7E3", "rax": "7EB", "dbg": true, "cmd": {"22": "B18C"}, "freq": 5,
+  "signals": [
+    {"id": "MG_IGN", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Ignition state"}
+  ]},
+{ "hdr": "7E3", "rax": "7EB", "dbg": true, "cmd": {"22": "B309"}, "freq": 10,
+  "signals": [
+    {"id": "MG_MOTOR_COOLANT_T", "path": "Drivetrain", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Motor coolant temperature"}
+  ]},
+{ "hdr": "7E3", "rax": "7EB", "dbg": true, "cmd": {"22": "B401"}, "freq": 1,
+  "signals": [
+    {"id": "MG_MOTOR_TQ", "path": "Drivetrain", "fmt": { "len": 16, "max": 32768, "min": -32767, "add": -32767, "unit": "newtonMeters" }, "name": "Motor torque"}
+  ]},
+{ "hdr": "7E3", "rax": "7EB", "dbg": true, "cmd": {"22": "B402"}, "freq": 1,
+  "signals": [
+    {"id": "MG_MOTOR_RPM", "path": "Drivetrain", "fmt": { "len": 16, "max": 32768, "min": -32767, "add": -32767, "unit": "rpm" }, "name": "Motor speed"}
+  ]},
+{ "hdr": "7E3", "rax": "7EB", "dbg": true, "cmd": {"22": "B405"}, "freq": 10,
+  "signals": [
+    {"id": "MG_MOTOR_T", "path": "Drivetrain", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Motor temperature"}
+  ]},
+{ "hdr": "7E3", "rax": "7EB", "dbg": true, "cmd": {"22": "B580"}, "freq": 10,
+  "signals": [
+    {"id": "MG_DCDC_MODE", "path": "Electrical", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "DC/DC converter mode"}
+  ]},
+{ "hdr": "7E3", "rax": "7EB", "dbg": true, "cmd": {"22": "B581"}, "freq": 5,
+  "signals": [
+    {"id": "MG_DCDC_IN_A", "path": "Electrical", "fmt": { "len": 16, "max": 3276.8, "min": -3276.7, "div": 10, "add": -3276.7, "unit": "amps" }, "name": "DC/DC converter input current"}
+  ]},
+{ "hdr": "7E3", "rax": "7EB", "dbg": true, "cmd": {"22": "B582"}, "freq": 5,
+  "signals": [
+    {"id": "MG_DCDC_IN_V", "path": "Electrical", "fmt": { "len": 16, "max": 6553.5, "div": 10, "unit": "volts" }, "name": "DC/DC converter input voltage"}
+  ]},
+{ "hdr": "7E3", "rax": "7EB", "dbg": true, "cmd": {"22": "B583"}, "freq": 5,
+  "signals": [
+    {"id": "MG_DCDC_OUT_A", "path": "Electrical", "fmt": { "len": 16, "max": 6553.5, "div": 10, "unit": "amps" }, "name": "DC/DC converter output current"}
+  ]},
+{ "hdr": "7E3", "rax": "7EB", "dbg": true, "cmd": {"22": "B584"}, "freq": 5,
+  "signals": [
+    {"id": "MG_DCDC_OUT_V", "path": "Electrical", "fmt": { "len": 16, "max": 6553.5, "div": 10, "unit": "volts" }, "name": "DC/DC converter output voltage"}
+  ]},
+{ "hdr": "7E3", "rax": "7EB", "dbg": true, "cmd": {"22": "B587"}, "freq": 10,
+  "signals": [
+    {"id": "MG_DCDC_T_VCU", "path": "Electrical", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "DC/DC converter temperature, vehicle control unit"}
+  ]},
+{ "hdr": "7E3", "rax": "7EB", "dbg": true, "cmd": {"22": "B703"}, "freq": 5,
+  "signals": [
+    {"id": "MG_HV_CONTACTOR", "path": "Battery", "fmt": {"bix": 7, "len": 1, "max": 1, "unit": "yesno" }, "name": "HV contactor closed"}
+  ]},
+{ "hdr": "7E3", "rax": "7EB", "dbg": true, "cmd": {"22": "B705"}, "freq": 5,
+  "signals": [
+    {"id": "MG_HVBAT_V_VCU", "path": "Battery", "fmt": { "len": 16, "max": 6553.5, "div": 10, "unit": "volts" }, "name": "HV battery voltage, vehicle control unit"}
+  ]},
+{ "hdr": "7E3", "rax": "7EB", "dbg": true, "cmd": {"22": "B712"}, "freq": 10,
+  "signals": [
+    {"id": "MG_CHG_A_LIMIT", "path": "Battery", "fmt": { "len": 16, "max": 6553.5, "div": 10, "unit": "amps" }, "name": "Charge current limit"}
+  ]},
+{ "hdr": "7E3", "rax": "7EB", "dbg": true, "cmd": {"22": "B71B"}, "freq": 5,
+  "signals": [
+    {"id": "MG_CHG_CONNECTED", "path": "Battery", "fmt": {"bix": 7, "len": 1, "max": 1, "unit": "yesno" }, "name": "Charger connected", "suggestedMetric": "pluggedIn"}
+  ]},
+{ "hdr": "7E3", "rax": "7EB", "dbg": true, "cmd": {"22": "B900"}, "freq": 1,
+  "signals": [
+    {"id": "MG_GEAR_RAW", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Gear selector code"}
+  ]},
 { "hdr": "7E3", "rax": "7EB", "dbg": true, "cmd": {"22": "BA00"}, "freq": 0.25,
   "signals": [
     {"id": "MG_VSS", "path": "Movement", "fmt": { "len": 16, "max": 455.35, "min": -200, "div": 100, "add": -200, "unit": "kilometersPerHour" }, "name": "Vehicle reported speed", "suggestedMetric": "speed"}
+  ]},
+{ "hdr": "7E3", "rax": "7EB", "dbg": true, "cmd": {"22": "BA40"}, "freq": 5,
+  "signals": [
+    {"id": "MG_PARK_BRAKE", "path": "Control", "fmt": { "len": 8, "max": 1, "unit": "yesno" }, "name": "Parking brake applied"}
+  ]},
+{ "hdr": "7E3", "rax": "7EB", "dbg": true, "cmd": {"22": "BB01"}, "freq": 5,
+  "signals": [
+    {"id": "MG_AC_P", "path": "Climate", "fmt": { "len": 16, "max": 65535, "unit": "scalar" }, "name": "A/C power"}
   ]},
 { "hdr": "7E3", "rax": "7EB", "dbg": true, "cmd": {"22": "BB05"}, "freq": 5,
   "signals": [
     {"id": "MG_AAT", "path": "Climate", "fmt": { "len": 8, "max": 80, "min": -40, "add": -40, "unit": "celsius" }, "name": "External temperature"}
   ]},
+{ "hdr": "7E3", "rax": "7EB", "dbg": true, "cmd": {"22": "BB06"}, "freq": 5,
+  "signals": [
+    {"id": "MG_HOOD", "path": "Doors", "fmt": {"bix": 7, "len": 1, "max": 1, "unit": "yesno" }, "name": "Hood open"}
+  ]},
+{ "hdr": "7E3", "rax": "7EB", "dbg": true, "cmd": {"22": "BB91"}, "freq": 5,
+  "signals": [
+    {"id": "MG_RAD_FAN", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Radiator fan state"}
+  ]},
 { "hdr": "7E4", "rax": "7EC", "dbg": true, "cmd": {"22": "B001"}, "freq": 180,
   "signals": [
-    {"id": "MG_EVCC_CURRENT_V2",        "path": "Battery.EVCC",       "fmt": {           "len": 16, "max": 250, "mul": 0.2,    "add": -409.6, "unit": "amps"    }, "name": "Current"},
-    {"id": "MG_HVBAT_CMU01_MINVOLT_V2", "path": "Battery.Modules.01", "fmt": {           "len": 16, "max": 10,  "mul": 0.0005, "add": 1,      "unit": "volts"   }, "name": "HV battery module 01 min voltage"},
-    {"id": "MG_HVBAT_CMU01_MAXVOLT_V2", "path": "Battery.Modules.01", "fmt": {"bix": 16, "len": 16, "max": 10,  "mul": 0.0005, "add": 1,      "unit": "volts"   }, "name": "HV battery module 01 max voltage"},
-    {"id": "MG_HVBAT_CMU01_MINTEMP_V2", "path": "Battery.Modules.01", "fmt": {"bix": 32, "len": 8,  "max": 150, "mul": 0.5,    "add": -40,    "unit": "celsius" }, "name": "HV battery module 01 min temperature"},
-    {"id": "MG_HVBAT_CMU01_MAXTEMP_V2", "path": "Battery.Modules.01", "fmt": {"bix": 40, "len": 8,  "max": 150, "mul": 0.5,    "add": -40,    "unit": "celsius" }, "name": "HV battery module 01 max temperature"}
+    {"id": "MG_EVCC_CURRENT_V2", "path": "Battery.EVCC", "fmt": { "len": 16, "max": 250, "mul": 0.2, "add": -409.6, "unit": "amps" }, "name": "Current"}
   ]},
 { "hdr": "7E4", "rax": "7EC", "dbg": true, "cmd": {"22": "B003"}, "freq": 180,
   "signals": [
@@ -372,6 +516,13 @@
 { "hdr": "7E4", "rax": "7EC", "dbg": true, "cmd": {"22": "B010"}, "freq": 4,
   "signals": [
     {"id": "MG_EVCC_VOLTAGE_V2", "path": "Battery.EVCC", "fmt": { "len": 16, "max": 675.618553, "mul": 0.0103092783, "unit": "volts" }, "name": "Voltage"}
+  ]},
+{ "hdr": "7E5", "rax": "7ED", "dbg": true, "cmd": {"22": "B001"}, "freq": 180,
+  "signals": [
+    {"id": "MG_HVBAT_CMU01_MINVOLT_V2", "path": "Battery.Modules.01", "fmt": {           "len": 16, "max": 10,  "mul": 0.0005, "add": 1,   "unit": "volts"   }, "name": "HV battery module 01 min voltage"},
+    {"id": "MG_HVBAT_CMU01_MAXVOLT_V2", "path": "Battery.Modules.01", "fmt": {"bix": 16, "len": 16, "max": 10,  "mul": 0.0005, "add": 1,   "unit": "volts"   }, "name": "HV battery module 01 max voltage"},
+    {"id": "MG_HVBAT_CMU01_MINTEMP_V2", "path": "Battery.Modules.01", "fmt": {"bix": 32, "len": 8,  "max": 150, "mul": 0.5,    "add": -40, "unit": "celsius" }, "name": "HV battery module 01 min temperature"},
+    {"id": "MG_HVBAT_CMU01_MAXTEMP_V2", "path": "Battery.Modules.01", "fmt": {"bix": 40, "len": 8,  "max": 150, "mul": 0.5,    "add": -40, "unit": "celsius" }, "name": "HV battery module 01 max temperature"}
   ]},
 { "hdr": "7E5", "rax": "7ED", "dbg": true, "cmd": {"22": "B009"}, "freq": 180,
   "signals": [
@@ -424,13 +575,37 @@
   "signals": [
     {"id": "MG_HVBAT_RESISTANCE_V2", "path": "Battery.Internal", "fmt": { "len": 16, "max": 32767.5, "mul": 0.5, "unit": "scalar" }, "name": "HV battery internal resistance"}
   ]},
+{ "hdr": "7E5", "rax": "7ED", "dbg": true, "cmd": {"22": "B047"}, "freq": 10,
+  "signals": [
+    {"id": "MG_HVBAT_ERR", "path": "Battery", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "HV battery error code"}
+  ]},
 { "hdr": "7E5", "rax": "7ED", "dbg": true, "cmd": {"22": "B048"}, "freq": 1,
   "signals": [
     {"id": "MG_HVBAT_CHARGING_V2", "path": "Battery", "fmt": {"bix": 7, "len": 1, "max": 1, "unit": "scalar" }, "name": "HV battery is charging?"}
   ]},
+{ "hdr": "7E5", "rax": "7ED", "dbg": true, "cmd": {"22": "B049"}, "freq": 10,
+  "signals": [
+    {"id": "MG_HVBAT_RELAY_B", "path": "Battery", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "HV battery main relay B state"}
+  ]},
+{ "hdr": "7E5", "rax": "7ED", "dbg": true, "cmd": {"22": "B04A"}, "freq": 10,
+  "signals": [
+    {"id": "MG_HVBAT_RELAY_G", "path": "Battery", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "HV battery main relay G state"}
+  ]},
+{ "hdr": "7E5", "rax": "7ED", "dbg": true, "cmd": {"22": "B052"}, "freq": 10,
+  "signals": [
+    {"id": "MG_HVBAT_RELAY_P", "path": "Battery", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "HV battery main relay P state"}
+  ]},
 { "hdr": "7E5", "rax": "7ED", "dbg": true, "cmd": {"22": "B056"}, "freq": 60,
   "signals": [
     {"id": "MG_HVBAT_TEMP_V2", "path": "Battery", "fmt": { "len": 8, "max": 87.5, "min": -40, "div": 2, "add": -40, "unit": "celsius" }, "name": "HV battery temperature"}
+  ]},
+{ "hdr": "7E5", "rax": "7ED", "dbg": true, "cmd": {"22": "B058"}, "freq": 5,
+  "signals": [
+    {"id": "MG_HVBAT_CELL_V_MAX", "path": "Battery", "fmt": { "len": 16, "max": 65.535, "div": 1000, "unit": "volts" }, "name": "Highest cell voltage"}
+  ]},
+{ "hdr": "7E5", "rax": "7ED", "dbg": true, "cmd": {"22": "B059"}, "freq": 5,
+  "signals": [
+    {"id": "MG_HVBAT_CELL_V_MIN", "path": "Battery", "fmt": { "len": 16, "max": 65.535, "div": 1000, "unit": "volts" }, "name": "Lowest cell voltage"}
   ]},
 { "hdr": "7E5", "rax": "7ED", "dbg": true, "cmd": {"22": "B05C"}, "freq": 60,
   "signals": [
@@ -481,6 +656,10 @@
     {"id": "MG_HVBAT_CMU12_MAXVOLT_V2", "path": "Battery.Modules.12", "fmt": {"bix": 16, "len": 16, "max": 10,  "mul": 0.0005, "add": 1,   "unit": "volts"   }, "name": "HV battery module 12 max voltage"},
     {"id": "MG_HVBAT_CMU12_MINTEMP_V2", "path": "Battery.Modules.12", "fmt": {"bix": 32, "len": 8,  "max": 150, "mul": 0.5,    "add": -40, "unit": "celsius" }, "name": "HV battery module 12 min temperature"},
     {"id": "MG_HVBAT_CMU12_MAXTEMP_V2", "path": "Battery.Modules.12", "fmt": {"bix": 40, "len": 8,  "max": 150, "mul": 0.5,    "add": -40, "unit": "celsius" }, "name": "HV battery module 12 max temperature"}
+  ]},
+{ "hdr": "7E5", "rax": "7ED", "dbg": true, "cmd": {"22": "B0CE"}, "freq": 10,
+  "signals": [
+    {"id": "MG_HVBAT_RANGE_RAW", "path": "Battery", "fmt": { "len": 16, "max": 65535, "unit": "scalar" }, "name": "HV battery range count"}
   ]},
 { "hdr": "7E5", "rax": "7ED", "dbg": true, "cmd": {"22": "B0DB"}, "freq": 180,
   "signals": [
