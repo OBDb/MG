@@ -1,7 +1,8 @@
 { "ecu": [
     { "hdr": "7DF", "rax": "7EC", "type": "charger" },
     { "hdr": "7DF", "rax": "7ED", "type": "battery" },
-    { "hdr": "7E0",               "type": "engine" }
+    { "hdr": "7E0",               "type": "engine" },
+    { "hdr": "7E3",               "type": "transmission" }
   ],
   "commands": [
 { "hdr": "710", "rax": "718", "dbg": true, "cmd": {"22": "B921"}, "freq": 1,
