@@ -409,6 +409,122 @@
   "signals": [
     {"id": "MG_MISFIRES_C4", "path": "Engine", "fmt": { "len": 16, "max": 65535, "unit": "scalar" }, "name": "Misfires, cylinder 4"}
   ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "0112"}, "freq": 5,
+  "signals": [
+    {"id": "MG_ECM_VPWR", "path": "Electrical", "fmt": { "len": 8, "max": 25.5, "div": 10, "unit": "volts" }, "name": "Control module voltage, engine module"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "B001"}, "freq": 5,
+  "signals": [
+    {"id": "MG_ECM_B001_RAW", "path": "ECU", "fmt": { "len": 16, "max": 65535, "unit": "scalar" }, "name": "Engine module B001 raw value"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "B003"}, "freq": 5,
+  "signals": [
+    {"id": "MG_ECM_B003_RAW", "path": "ECU", "fmt": { "len": 16, "max": 65535, "unit": "scalar" }, "name": "Engine module B003 raw value"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "B009"}, "freq": 5,
+  "signals": [
+    {"id": "MG_ECM_B009_RAW", "path": "ECU", "fmt": { "len": 16, "max": 65535, "unit": "scalar" }, "name": "Engine module B009 raw value"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "B010"}, "freq": 5,
+  "signals": [
+    {"id": "MG_ECM_B010_RAW", "path": "ECU", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Engine module B010 raw value"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "B011"}, "freq": 5,
+  "signals": [
+    {"id": "MG_ECM_B011_RAW", "path": "ECU", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Engine module B011 raw value"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "B013"}, "freq": 5,
+  "signals": [
+    {"id": "MG_ECM_B013_RAW", "path": "ECU", "fmt": { "len": 16, "max": 65535, "unit": "scalar" }, "name": "Engine module B013 raw value"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "B019"}, "freq": 5,
+  "signals": [
+    {"id": "MG_ECM_B019_RAW", "path": "ECU", "fmt": { "len": 16, "max": 65535, "unit": "scalar" }, "name": "Engine module B019 raw value"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "B026"}, "freq": 5,
+  "signals": [
+    {"id": "MG_ECM_B026_RAW", "path": "ECU", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Engine module B026 raw value"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "B029"}, "freq": 5,
+  "signals": [
+    {"id": "MG_ECM_B029_RAW", "path": "ECU", "fmt": { "len": 16, "max": 65535, "unit": "scalar" }, "name": "Engine module B029 raw value"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "B041"}, "freq": 5,
+  "signals": [
+    {"id": "MG_ECM_B041_RAW", "path": "ECU", "fmt": { "len": 16, "max": 65535, "unit": "scalar" }, "name": "Engine module B041 raw value"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "B042"}, "freq": 5,
+  "signals": [
+    {"id": "MG_ECM_B042_RAW", "path": "ECU", "fmt": { "len": 16, "max": 65535, "unit": "scalar" }, "name": "Engine module B042 raw value"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "B045"}, "freq": 5,
+  "signals": [
+    {"id": "MG_ECM_B045_RAW", "path": "ECU", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Engine module B045 raw value"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "B046"}, "freq": 5,
+  "signals": [
+    {"id": "MG_ECM_B046_RAW", "path": "ECU", "fmt": { "len": 16, "max": 65535, "unit": "scalar" }, "name": "Engine module B046 raw value"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "B049"}, "freq": 5,
+  "signals": [
+    {"id": "MG_ECM_B049_RAW", "path": "ECU", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Engine module B049 raw value"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "B052"}, "freq": 5,
+  "signals": [
+    {"id": "MG_ECM_B052_RAW", "path": "ECU", "fmt": { "len": 16, "max": 65535, "unit": "scalar" }, "name": "Engine module B052 raw value"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "B058"}, "freq": 5,
+  "signals": [
+    {"id": "MG_ECM_B058_RAW", "path": "ECU", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Engine module B058 raw value"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "B059"}, "freq": 5,
+  "signals": [
+    {"id": "MG_ECM_B059_RAW", "path": "ECU", "fmt": { "len": 16, "max": 32767, "min": -32768, "sign": true, "unit": "scalar" }, "name": "Engine module B059 raw value"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "B061"}, "freq": 5,
+  "signals": [
+    {"id": "MG_ECM_B061_RAW", "path": "ECU", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Engine module B061 raw value"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "B101"}, "freq": 5,
+  "signals": [
+    {"id": "MG_ECM_B101_RAW", "path": "ECU", "fmt": { "len": 16, "max": 65535, "unit": "scalar" }, "name": "Engine module B101 raw value"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "B110"}, "freq": 5,
+  "signals": [
+    {"id": "MG_ECM_B110_RAW", "path": "ECU", "fmt": { "len": 16, "max": 32767, "min": -32768, "sign": true, "unit": "scalar" }, "name": "Engine module B110 raw value"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "B111"}, "freq": 5,
+  "signals": [
+    {"id": "MG_ECM_B111_RAW", "path": "ECU", "fmt": { "len": 16, "max": 32767, "min": -32768, "sign": true, "unit": "scalar" }, "name": "Engine module B111 raw value"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "B120"}, "freq": 5,
+  "signals": [
+    {"id": "MG_ECM_B120_RAW", "path": "ECU", "fmt": { "len": 16, "max": 32767, "min": -32768, "sign": true, "unit": "scalar" }, "name": "Engine module B120 raw value"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "B401"}, "freq": 5,
+  "signals": [
+    {"id": "MG_ECM_B401_RAW", "path": "ECU", "fmt": { "len": 32, "max": 4294967295, "unit": "scalar" }, "name": "Engine module B401 raw value"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "B705"}, "freq": 5,
+  "signals": [
+    {"id": "MG_ECM_B705_RAW", "path": "ECU", "fmt": { "len": 16, "max": 32767, "min": -32768, "sign": true, "unit": "scalar" }, "name": "Engine module B705 raw value"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "B712"}, "freq": 5,
+  "signals": [
+    {"id": "MG_ECM_B712_RAW", "path": "ECU", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Engine module B712 raw value"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "B921"}, "freq": 5,
+  "signals": [
+    {"id": "MG_ECM_B921_RAW", "path": "ECU", "fmt": { "len": 32, "max": 2147483647, "min": -2147483648, "sign": true, "unit": "scalar" }, "name": "Engine module B921 raw value"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "D001"}, "freq": 5,
+  "signals": [
+    {"id": "MG_ECM_D001_RAW", "path": "ECU", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Engine module D001 raw value"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "E101"}, "freq": 30,
+  "signals": [
+    {"id": "MG_ECM_ODO", "path": "Trips", "fmt": { "len": 24, "max": 16777215, "unit": "kilometers" }, "name": "Odometer, engine module"}
+  ]},
 { "hdr": "7E1", "dbg": true, "cmd": {"22": "1940"}, "freq": 1,
   "signals": [
     {"id": "MG_ATF_T_ECU_10513229", "path": "Engine", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Transmission fluid temperature, ECU 10513229"}
@@ -416,6 +532,94 @@
 { "hdr": "7E1", "dbg": true, "cmd": {"22": "B423"}, "freq": 1,
   "signals": [
     {"id": "MG_ATF_T_ECU_10472701_11194479", "path": "Engine", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Transmission fluid temperature, ECU 10472701 and 11194479"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"22": "0112"}, "freq": 5,
+  "signals": [
+    {"id": "MG_TCM_VPWR", "path": "Electrical", "fmt": { "len": 8, "max": 25.5, "div": 10, "unit": "volts" }, "name": "Control module voltage, transmission module"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"22": "B001"}, "freq": 5,
+  "signals": [
+    {"id": "MG_TCM_B001_RAW", "path": "ECU", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Transmission module B001 raw value"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"22": "B003"}, "freq": 5,
+  "signals": [
+    {"id": "MG_TCM_B003_RAW", "path": "ECU", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Transmission module B003 raw value"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"22": "B009"}, "freq": 5,
+  "signals": [
+    {"id": "MG_TCM_B009_RAW", "path": "ECU", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Transmission module B009 raw value"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"22": "B00F"}, "freq": 5,
+  "signals": [
+    {"id": "MG_TCM_B00F_RAW", "path": "ECU", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Transmission module B00F raw value"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"22": "B011"}, "freq": 5,
+  "signals": [
+    {"id": "MG_TCM_B011_RAW", "path": "ECU", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Transmission module B011 raw value"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"22": "B013"}, "freq": 5,
+  "signals": [
+    {"id": "MG_TCM_B013_RAW", "path": "ECU", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Transmission module B013 raw value"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"22": "B019"}, "freq": 5,
+  "signals": [
+    {"id": "MG_TCM_B019_RAW", "path": "ECU", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Transmission module B019 raw value"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"22": "B025"}, "freq": 5,
+  "signals": [
+    {"id": "MG_TCM_B025_RAW", "path": "ECU", "fmt": { "len": 16, "max": 32767, "min": -32768, "sign": true, "unit": "scalar" }, "name": "Transmission module B025 raw value"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"22": "B042"}, "freq": 5,
+  "signals": [
+    {"id": "MG_TCM_B042_RAW", "path": "ECU", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Transmission module B042 raw value"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"22": "B043"}, "freq": 5,
+  "signals": [
+    {"id": "MG_TCM_B043_RAW", "path": "ECU", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Transmission module B043 raw value"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"22": "B047"}, "freq": 5,
+  "signals": [
+    {"id": "MG_TCM_B047_RAW", "path": "ECU", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Transmission module B047 raw value"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"22": "B048"}, "freq": 5,
+  "signals": [
+    {"id": "MG_TCM_B048_RAW", "path": "ECU", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Transmission module B048 raw value"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"22": "B049"}, "freq": 5,
+  "signals": [
+    {"id": "MG_TCM_B049_RAW", "path": "ECU", "fmt": { "len": 16, "max": 32767, "min": -32768, "sign": true, "unit": "scalar" }, "name": "Transmission module B049 raw value"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"22": "B04A"}, "freq": 5,
+  "signals": [
+    {"id": "MG_TCM_B04A_RAW", "path": "ECU", "fmt": { "len": 16, "max": 65535, "unit": "scalar" }, "name": "Transmission module B04A raw value"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"22": "B052"}, "freq": 5,
+  "signals": [
+    {"id": "MG_TCM_B052_RAW", "path": "ECU", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Transmission module B052 raw value"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"22": "B056"}, "freq": 5,
+  "signals": [
+    {"id": "MG_TCM_B056_RAW", "path": "ECU", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Transmission module B056 raw value"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"22": "B058"}, "freq": 5,
+  "signals": [
+    {"id": "MG_TCM_B058_RAW", "path": "ECU", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Transmission module B058 raw value"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"22": "B059"}, "freq": 5,
+  "signals": [
+    {"id": "MG_TCM_B059_RAW", "path": "ECU", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Transmission module B059 raw value"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"22": "D001"}, "freq": 5,
+  "signals": [
+    {"id": "MG_TCM_D001_RAW", "path": "ECU", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Transmission module D001 raw value"}
+  ]},
+{ "hdr": "7E2", "rax": "7EA", "dbg": true, "cmd": {"22": "0112"}, "freq": 5,
+  "signals": [
+    {"id": "MG_7EA_VPWR", "path": "Electrical", "fmt": { "len": 8, "max": 25.5, "div": 10, "unit": "volts" }, "name": "Control module voltage, module 7EA"}
+  ]},
+{ "hdr": "7E2", "rax": "7EA", "dbg": true, "cmd": {"22": "D001"}, "freq": 5,
+  "signals": [
+    {"id": "MG_7EA_D001_RAW", "path": "ECU", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Module 7EA D001 raw value"}
   ]},
 { "hdr": "7E3", "dbg": true, "cmd": {"22": "D112"}, "freq": 1,
   "signals": [
